@@ -1,0 +1,44 @@
+
+
+h1{
+    color: blue;
+}
+
+#heading{
+    color: #ff0000;
+}
+
+.team-heading{
+    color: #008000;
+}
+
+#team-head{
+    color: rgba(117, 13, 181, 1);
+}
+
+.box{
+    border: 5px solid green;
+    /* border-bottom: 5px solid green; */
+    /* border-left: 5px solid green; */
+    /* border-right: 5px solid green; */
+    /* border-top: 5px solid green; */
+    
+    /* Inner Spacing */
+    padding: 50px;
+
+    /* padding-top: 50px;
+    padding-right: 100px;
+    padding-bottom: 150px;
+    padding-left: 200px; */
+
+    /* Two params 1st => top and bottom => 2nd left and right*/
+
+    /* padding: 100px 50px; */
+
+    /* Four params TOP,RIGHT,BOTTOM, LEFT */
+    /* padding: 50px 100px 150px 200px; */
+
+    /* outer spacing */
+    margin: 100px;
+
+}
