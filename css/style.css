@@ -1,8 +1,12 @@
-
-
-h1{
-    color: blue;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
+
+/* h1{
+    color: blue;
+} */
 
 #heading{
     color: #ff0000;
@@ -41,4 +45,97 @@ h1{
     /* outer spacing */
     margin: 100px;
 
+}
+
+.box-2{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin-bottom: 30px;
+    padding: 50px;
+}
+
+.box-3{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    padding: 50px;
+    border: 10px solid red;
+    box-sizing: border-box;
+}
+
+.parent{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    /* position: static;  */
+    /* position: relative; */
+    bottom: 0px;
+    left: 0px;
+}
+
+.child{
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    position: absolute;
+    /* position: fixed; */
+    top: 0px;
+    right: 0px;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    margin: 20px;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 20px;
+    transition: all 1s;
+}
+
+button:hover{
+    background-color: orangered;
+    padding: 25px 45px;
+}
+/* 
+.test-hover{
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    border: 2px solid blue;
+    padding: 30px;
+    color: black;
+}
+
+.test-hover:hover{
+    background-color: blue;
+    color: #ffffff;
+} */
+
+
+/* ul li:nth-child(1){
+    color: blue;
+}
+
+ul li:nth-child(2){
+    color: red;
+}
+
+
+ul li:nth-child(3){
+    color: green;
+} */
+
+ul li:nth-child(odd){
+    color: green;
+}
+
+ul li:nth-child(even){
+    color: blue;
+}
+
+
+.comb > div:nth-child(3){
+    background-color: blue;
 }
