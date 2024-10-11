@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+
+/* Header Start */
+
+header{
+    padding: 20px 0px;
+    background-color: #750DB5;
+    color: #ffffff;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-wrapper h4{
+    font-size: 32px;
+}
+
+.header-wrapper nav{
+    display: flex;
+    gap: 50px;
+}
+
+.header-wrapper nav a{
+    color: #ffffff;
+}
+
+/* .header-wrapper nav a:not(a:nth-child(3)){
+    margin-right: 30px;
+} */
+
+/* .header-wrapper nav a:nth-child(3){
+    margin-right: 0px;
+} */
+
+/* Banner start */
+.bannner{
+    padding: 100px 0px;
+}
+.banner-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.banner-wrapper > div{
+    width: 50%;
+}
+
+.banner-wrapper > div:nth-child(2) img{
+    width: 100%;
+}
+
+.banner-wrapper h1{
+    font-size: 48px;
+    line-height: 70px;
+    font-weight: 600;
+    /* margin-bottom: 35px; */
+}
+
+.banner-wrapper p{
+    font-size: 18px;
+    color: #505050;
+    margin: 35px 0px;
+}
+
+.banner-wrapper > div:nth-child(1) > div{
+    display: flex;
+    gap: 40px;
+}
+
+.banner-wrapper a{
+    padding: 15px 50px;
+    font-size: 18px;
+    color: #333333;
+    border-radius: 12px;
+}
+
+.banner-wrapper > div:nth-child(1) > div a:nth-child(1){
+    background-color: #FFA92C;
+    color: #ffffff;
+    box-shadow: 0px 4px 20px 0px #FFA92C;
+}
