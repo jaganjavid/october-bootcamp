@@ -14,6 +14,10 @@ a{
     text-decoration: none;
 }
 
+span {
+    display: inline-block;
+}
+
 
 .container{
     width: 80%;
@@ -73,7 +77,7 @@ header{
 }
 
 .banner-wrapper h1{
-    font-size: 48px;
+    font-size: 35px;
     line-height: 70px;
     font-weight: 600;
     /* margin-bottom: 35px; */
@@ -102,3 +106,124 @@ header{
     color: #ffffff;
     box-shadow: 0px 4px 20px 0px #FFA92C;
 }
+
+/* jobs Start */
+.jobs{
+    padding: 80px 0px;
+}
+
+.jobs h2{
+    margin-bottom: 40px;
+}
+
+.jobs-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.jobs-wrapper > div{
+    width: 32%;
+    padding: 25px;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.jobs-wrapper > div img{
+    margin-bottom: 20px;
+}
+
+.jobs-wrapper > div h3{
+    margin-bottom: 15px;
+}
+
+/* .jobs-wrapper > div span{
+    margin-bottom: 20px;
+} */
+
+.jobs-wrapper > div p{
+    margin: 20px 0px;
+}
+
+.jobs-wrapper > div:nth-child(1){
+  background-color: #0C445C;
+}
+
+.jobs-wrapper > div:nth-child(2){
+    background-color: #5B2C98;
+}
+
+.jobs-wrapper > div:nth-child(3){
+    background-color: #7F3219;
+}
+
+.job-btn {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.job-btn a{
+    color: #ffffff;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.job-btn a:hover{
+    background-color: #FFA92C;
+    color: #333333;
+}
+
+footer{
+    padding: 25px 0px;
+    background-color: #D6D6D6;
+    text-align: center;
+    color: #4254F4;
+}
+
+
+@media only screen and (min-width: 1100px) {
+    .banner-wrapper h1{
+        font-size: 48px;
+    }
+}
+
+
+@media only screen and (max-width: 998px) {
+    .banner-wrapper {
+        flex-direction: column;
+    }
+
+    .banner-wrapper > div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner-wrapper > div:nth-child(1) > div{
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .header-wrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* .header-wrapper{
+        display: block;
+        text-align: center;
+    }
+
+    .header-wrapper nav{
+        justify-content: center;
+        margin-top: 20px;
+    } */
+
+}
+
+
