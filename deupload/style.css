@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Default style */
+.banner,
+.banner-bottom,
+.lightning{
+    padding: 100px 0px;
+}
+
+.sec-heading{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/* Own Class */
+.base-color{
+    background-color: #651FFF;
+}
+
+/* Banner Start */
+
+.banner{
+    background-color: #EBE5FA;
+}
+
+.banner-wrapper h1{
+    font-weight:700;
+    line-height: 50px;
+}
+
+.banner-wrapper h1 > span:nth-child(3) > span{
+    color: #651FFF;
+}
+
+/* lightning start */
+.lightning-wrapper > div > div > div{
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.lightning-wrapper > div > div > div a{
+    color: #ffffff;
+}

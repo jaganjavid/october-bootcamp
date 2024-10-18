@@ -119,6 +119,7 @@ header{
 .jobs-wrapper{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .jobs-wrapper > div{
@@ -204,6 +205,16 @@ footer{
         justify-content: center;
         margin-bottom: 50px;
     }
+
+    .jobs-wrapper > div:nth-child(1),
+    .jobs-wrapper > div:nth-child(2){
+       width: 48%;
+       margin-bottom: 30px;
+     }
+        
+    .jobs-wrapper > div:nth-child(3){
+        width: 100%;
+    }
 }
 
 
@@ -223,6 +234,12 @@ footer{
         justify-content: center;
         margin-top: 20px;
     } */
+
+    .jobs-wrapper > div:nth-child(1),
+    .jobs-wrapper > div:nth-child(2),
+    .jobs-wrapper > div:nth-child(3){
+       width: 100%;
+    }
 
 }
 
