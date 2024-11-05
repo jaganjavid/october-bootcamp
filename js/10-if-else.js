@@ -76,3 +76,30 @@ if(color === "red"){
 } else{
     console.log("I don't know the color");
 }
+
+// Logical Operator
+
+// AND - && check both the vlaue
+
+const name = "Javid";
+const age = 30;
+
+if(age > 0 && age < 12){
+    console.log(`${name} is a child`);
+} else if(age >= 13 && age <=19){
+    console.log(`${name} is a teen`);
+} else {
+    console.log(`${name} is a adult`);
+}
+
+// OR - || check only one true or false
+
+if(age < 16 || age > 65){
+    console.log(`${name} can not run the race`);
+} else {
+    console.log(`${name} can run the race`);
+}
+
+// Ternary Operator
+
+console.log(100 === 100 ? "correct" : "Incorrect");
