@@ -1,0 +1,47 @@
+
+
+const App = () => {
+
+  const name = "Javid";
+  const age = 27;
+
+  const users = [
+    {id:1, text:"User 1"},
+    {id:2, text:"User 2"},
+    {id:3, text:"User 3"},
+  ]
+
+  const loading = false;
+
+  const showUsers = false;
+
+  const userBlock = ( <div className="users-block">
+    <ul>
+      {users.map((user, index) => (
+        <li key={user.id}>{user.text}</li>
+      ))}
+    </ul>
+  </div>)
+
+  if(loading) return (
+    <h1>Loading...</h1>
+  )
+
+  return (
+    <div>
+      <h1>{name.toUpperCase()}</h1>
+      <h3>{age}</h3>
+      <h4>{5 + 5}</h4>
+
+      <h4>{users.length}</h4>
+
+      <h4>{showUsers ? "yes" : "no"}</h4>
+      
+      {showUsers && userBlock}
+
+
+    </div>
+  )
+}
+
+export default App
