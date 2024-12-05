@@ -146,9 +146,32 @@ function removeTask(e) {
 
     if (e.target.parentElement.classList.contains("delete-item")) {
         e.target.parentElement.parentElement.remove()
+        removeTaskFromLocalStorage(e.target.parentElement.parentElement);
     }
 
 
+}
+
+
+function removeTaskFromLocalStorage(taskElement){
+
+    let tasks; 
+
+    if(localStorage.getItem("lsTasks") === null){
+        tasks = [];
+    } else {
+        tasks = JSON.parse(localStorage.getItem("lsTasks"));
+    }
+
+    tasks.forEach(function(task, index){
+        
+        if(taskElement.innerText === task){
+            tasks.splice(index, 1);
+        }
+        
+    })
+
+    localStorage.setItem("lsTasks", JSON.stringify(tasks));
 }
 
 
