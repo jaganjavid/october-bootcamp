@@ -1,6 +1,12 @@
+import { useContext } from "react"
 import FeedbackItem from "./FeedbackItem"
 
-const FeedbackList = ({feedback, handleDelete}) => {
+import FeedbackContext from "../context/FeedbackContext"
+
+const FeedbackList = ( {handleDelete}) => {
+
+
+  const { feedback } = useContext(FeedbackContext)
   
 
   return (

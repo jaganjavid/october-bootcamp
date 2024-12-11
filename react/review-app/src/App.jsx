@@ -1,10 +1,9 @@
-
+import { useState } from "react";
 
 
 import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList";
-
-import { useState } from "react";
+import FeedbackForm from "./components/FeedbackForm";
 
 
 const App = () => {
@@ -26,16 +25,7 @@ const App = () => {
         text: "This is text 3"
     },
   ])
-
-
-  const deleteFeedback = (id) => {
-    
-    if(window.confirm("Are you sure")){
-      setFeedback(feedback.filter((item) => item.id !== id));
-    }
-
-  }
-
+  
 
 
   return (
@@ -44,8 +34,11 @@ const App = () => {
     
     <Header/>
 
+
+
     <div className="container">
-      <FeedbackList feedback={feedback} handleDelete={deleteFeedback}/>
+      <FeedbackForm/>
+      <FeedbackList/>
 
     </div>
 

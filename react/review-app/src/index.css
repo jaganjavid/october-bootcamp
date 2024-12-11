@@ -55,3 +55,46 @@ header h4{
     align-items: center;
     gap: 20px;
 }
+
+.input-group{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.input-group input{
+    width: 90%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+}
+
+.input-group input:focus{
+    outline: none;
+}
+
+.btn{
+    padding: 15px 30px;
+    border: none;
+   
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+.btn-primary{
+    background-color: blue;
+}
+
+.btn-secondary{
+    background-color: orangered;
+}
+
+.btn:disabled{
+    background-color: grey;
+}
+
+.error{
+    color: red;
+    text-align: center;
+    margin-top: 15px;
+}
