@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList";
 import FeedbackForm from "./components/FeedbackForm";
+import FeedbackStats from "./components/FeedbackStats"
 
 
 const App = () => {
@@ -38,8 +39,8 @@ const App = () => {
 
     <div className="container">
       <FeedbackForm/>
+      <FeedbackStats/>
       <FeedbackList/>
-
     </div>
 
     </>

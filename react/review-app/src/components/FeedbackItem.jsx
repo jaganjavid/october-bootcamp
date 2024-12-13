@@ -9,7 +9,7 @@ const FeedbackItem = ({item}) => {
 
 
 
-    const { deleteFeedback } = useContext(FeedbackContext);
+    const { deleteFeedback, editFeedback } = useContext(FeedbackContext);
     
 
     return (
@@ -19,7 +19,7 @@ const FeedbackItem = ({item}) => {
 
                 <div>
                     <div className="edit">
-                       <FaEdit size="20px" color="#ff9100"/>
+                       <FaEdit size="20px" color="#ff9100" onClick={() => editFeedback(item)}/>
                     </div>
 
                     <div className="delete">

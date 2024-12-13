@@ -1,4 +1,5 @@
 
+import { use } from "react";
 import { createContext, useState } from "react";
 
 
@@ -6,6 +7,9 @@ const FeedbackContext = createContext();
 
 
 export const FeedbackProvider = ({children}) => {
+
+
+   
 
 
     const [feedback, setFeedback] = useState([
@@ -23,6 +27,11 @@ export const FeedbackProvider = ({children}) => {
         },
     ]);
 
+    const [feedbackEdit, setFeedbackEdit] = useState({
+      item:{},
+      edit:false
+    })
+
       const addFeedback = (data) => {
         setFeedback([data, ...feedback]);
       }
@@ -35,12 +44,26 @@ export const FeedbackProvider = ({children}) => {
     
       }
 
+      const updateFeedback = (id, updItem) => {
+        setFeedback(feedback.map((item) => item.id === id ? {...item, ...updItem} : item))
+      }
+
+      const editFeedback = (item) => {
+        setFeedbackEdit({
+          item:item,
+          edit:true
+        })
+      }
+
 
     return (
         <FeedbackContext.Provider value={{
             feedback,
+            feedbackEdit,
             addFeedback,
-            deleteFeedback
+            deleteFeedback,
+            updateFeedback,
+            editFeedback
         }}>
           {children}
         </FeedbackContext.Provider>

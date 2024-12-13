@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect} from "react"
 import Card from "./shared/Card"
 
 
@@ -16,7 +16,7 @@ const FeedbackForm = ({handleAdd}) => {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");  
 
-  const { addFeedback } = useContext(FeedbackContext);
+  const { addFeedback, feedbackEdit, updateFeedback } = useContext(FeedbackContext);
 
 
   const handleTextChange = (e) => {
@@ -46,18 +46,26 @@ const FeedbackForm = ({handleAdd}) => {
     const newFeedback = {
       id:uuidv4(),
       text:text,
-
     }
 
-    addFeedback(newFeedback);
+    if(feedbackEdit.edit === true){
+      updateFeedback(feedbackEdit.item.id, newFeedback)
+    }else{
+      addFeedback(newFeedback);
+    }
 
     setText("");
     setMessage("");
     setBtnDisabled(true);
-
-
     
   }
+
+  useEffect(() => {
+    if(feedbackEdit.edit === true){
+      setBtnDisabled(false);
+      setText(feedbackEdit.item.text)
+    }
+  }, [feedbackEdit])
 
   return (
     <Card>
@@ -65,7 +73,7 @@ const FeedbackForm = ({handleAdd}) => {
             <div className="input-group">
                 <input type="text" placeholder="Add your Reviews" onChange={handleTextChange} value={text}/>
                 <Button version={"primary"} type="submit" isDisabled={btnDisabled}>
-                    Send
+                    {feedbackEdit.edit === true ? "Update" : "Add"}
                 </Button>
             </div>
 
