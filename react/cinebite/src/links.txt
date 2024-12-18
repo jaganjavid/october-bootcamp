@@ -1,0 +1,17 @@
+// Now Playing
+https://api.themoviedb.org/3/movie/now_playing
+
+// popular
+https://api.themoviedb.org/3/movie/popular
+
+//Top Rated
+https://api.themoviedb.org/3/movie/top_rated
+
+// upcoming
+https://api.themoviedb.org/3/movie/upcoming
+
+// Movie Detials
+https://api.themoviedb.org/3/movie/movie_id
+
+// Movie Search
+https://api.themoviedb.org/3/search/movie
